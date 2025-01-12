@@ -1,0 +1,68 @@
+/* Navbar */
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1em;
+    font-size: .8rem;
+    color: var(--dark);
+}
+
+nav .container {
+    position: relative;
+}
+
+nav .hamBtn .fa-bars {
+    font-size: 1.2em;
+    position: relative;
+    z-index: 1;
+}
+
+nav .socmed {
+    margin: 0 1em;
+}
+
+
+nav .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 250px;
+    background-color: var(--basic);
+    border: .5px solid rgb(201, 201, 201);
+    border-radius: .5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+nav .menu.active {
+    top: 4.3em;
+    opacity: 1;
+}
+
+nav .menu a {
+    width: 100%;
+}
+
+nav .menu a:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+/* End Navbar */
+
+
+/* Responsive */
+/* View Monitor */
+@media screen and (min-width: 762px) {
+    /* Navbar */
+    nav a {
+        font-size: 1.2rem;
+    }
+}
