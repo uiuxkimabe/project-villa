@@ -1,180 +1,146 @@
-/* Navbar */
+/* Nav */
 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 nav a {
-    display: block;
-    padding: 1em;
-    font-size: .8rem;
-    color: var(--dark);
+  padding: 1em 0;
+  color: var(--dark);
 }
-
-nav .logo a {
-    padding: 1em 0;
-}
-
-nav .hamBtn .fa-bars {
-    font-size: 1.2em;
-    position: relative;
-    z-index: 1;
-}
-
-nav .socmed {
-    margin: 0 1em;
-}
-
 
 nav .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 250px;
-    background-color: var(--basic);
-    border: .5px solid rgb(201, 201, 201);
-    border-radius: .5em;
-    position: absolute;
-    right: 0;
-    top: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all .3s ease-in-out;
+  width: 60%;
 }
 
-nav .menu.active {
-    top: 4.3em;
-    opacity: 1;
+nav .hamBtn {
+  display: none;
 }
 
-nav .menu a {
-    width: 100%;
-}
+/* end nav */
 
-nav .menu a:hover {
-    background-color: rgb(201, 201, 201);
-}
-
-/* End Navbar */
-
-/* Jumbotron */
+/* jumbotron */
 
 #jumbotron {
-    margin: 2em auto;
-    max-width: 95%;
-    border-radius: .8em;
-    position: relative;
+  text-align: center;
+  padding: 3em 0;
 }
 
 #jumbotron .row {
-    height: 500px;
-    gap: 1em;
-    text-align: center;
-    flex-direction: column;
+  overflow: hidden;
+  margin: 3em 0;
+  padding: 2em 0;
+  background: linear-gradient(180deg, rgba(2, 0, 36, 0.815) 0%, rgba(9, 9, 121, 0.801) 35%, rgba(20, 20, 20, 0.89) 100%), url(../img/villa-gunung-gelis/jp1.jpeg) no-repeat;
+  background-position: center;
+  border-radius: 1em;
+  overflow: hidden;
+  color: var(--basic);
 }
 
-#jumbotron .row .col {
-    justify-content: center;
-    width: 100%;
-    height: 80%;
-    position: relative;
+#jumbotron .content {
+  padding: 1em;
+  margin: 1em 0;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.822); */
+  color: var(--basic);
 }
 
-#jumbotron h2 {
-    color: var(--royal-blue);
+#jumbotron .content figcaption{
+  text-align: left;
+  padding: 2em;
+  position: relative;
+}
+
+#jumbotron .content figcaption::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+#jumbotron .col {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#jumbotron .col img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 #jumbotron .cta-btn {
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-    width: 100%;
+  margin-top: 1em;
+  gap: 1em;
+  justify-content: center;
+  font-weight: var(--fw-5);
 }
 
-#jumbotron .cta-btn .light-btn,
-.solid-btn {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    padding: 1em 2em;
-    border: none;
-    background: none;
-    font-size: 1em;
-    font-weight: var(--fw-5);
-    border-radius: .5em;
+#jumbotron .cta-btn .light-btn {
+  display: block;
+  padding: .5em 1.5em;
+  border: 2px solid var(--royal-blue);
+  color: var(--royal-blue);
 }
 
-.cta-btn .light-btn {
-    font-weight: var(--fw-5);
-    color: var(--penn-blue);
-    border: 1px solid var(--royal-blue) !important;
+#jumbotron .cta-btn .solid-btn {
+  padding: .5em 1.5em;
+  font-weight: var(--fw-5);
+  background-color: var(--royal-blue);
+  border: 2px solid var(--royal-blue);
+  color: var(--basic);
 }
 
-.cta-btn .solid-btn {
-    font-weight: var(--fw-5);
-    background-color: var(--penn-blue);
-    color: var(--pearl);
-}
 
-#jumbotron img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: .8em;
-}
 
-#jumbotron .hero-photo .accent {
-    gap: 1em;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-    background: var(--basic);
-    bottom: 0;
-    right: 0;
-    padding: 1em;
-    font-weight: var(--fw-5);
-    border-top-left-radius: .8em;
-}
-
-/* End Jumbotron */
-
+/* end jumbotron */
 
 /* Responsive */
-/* View Monitor */
-@media screen and (min-width: 800px) {
-    /* Navbar */
-    nav a {
-        font-size: 1.2rem;
-    }
-    /* Jumbotron */
-    #jumbotron {
-        max-width: 80%;
-        /* position: relative; */
-        border: .4px solid var(--pearl);
-    }
+/* Tablet View */
+@media screen and (max-width: 600px) {
+  /* nav */
+  nav {
+    padding: 1em 0;
+  }
 
-    #jumbotron .row {
-        text-align: left;
-        flex-direction: row;
-    }
+  nav .menu {
+    max-width: 200px;
+    flex-direction: column;
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+    display: none;
+    transition: .3s ease-in-out;
+    align-items: flex-start;
+    border: 1px solid var(--grey);
+    border-radius: .5em;
+    overflow: hidden;
+    background-color: var(--basic);
+  }
 
-    #jumbotron .row .col:first-child {
-        background-color: var(--basic);
-        position: relative;
-        padding: 1em;
-        width: 90%;
-    }
+  nav .menu a {
+    width: 100%;
+    padding: 1em;
+  }
 
-    #jumbotron .row .col {
-        flex: 1 1;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
+  nav .menu a:hover {
+    background-color: var(--grey);
+  }
 
-    #jumbotron .cta-btn {
-        justify-content: flex-start;
-    }
+  nav .menu.active {
+    display: flex;
+  }
+
+  nav .hamBtn {
+    display: block;
+  }
 }

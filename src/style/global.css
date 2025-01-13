@@ -8,14 +8,14 @@ body {
     box-sizing: border-box;
     font-family: "Poppins", serif;
     text-decoration: none;
-    color: var(--dark);
+    /* color: var(--dark); */
 }
 
 :root {
     /* color */
-    --basic: ivory;
+    --basic: #fff;
     --dark: #131B23;
-    --grey: #595457;
+    --grey: #d3cacf;
     --penn-blue: #001c55;
     --royal-blue:#0A2472;
     --bice-blue: #0e6ba8;
