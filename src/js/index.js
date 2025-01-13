@@ -10,3 +10,13 @@ document.addEventListener('click', (e) => {
         menu.classList.remove('active')
     }
 })
+
+// Scroll Change
+const navbar = document.querySelector('nav')
+window.addEventListener('scroll',()=> {
+    if (scrollY > 1) {
+        navbar.classList.add('active')
+    } else {
+        navbar.classList.remove('active')
+    }
+})
