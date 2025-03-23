@@ -49,6 +49,7 @@ body {
     align-items: center;
 }
 
+/* Default Display Grid */
 .d-grid {
     display: grid;
     place-items: center;

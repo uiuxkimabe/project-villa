@@ -3,149 +3,94 @@
 nav {
   position: sticky;
   top: 0;
-  z-index: 999;
-  transition: .3s ease-in-out;
-}
-
-nav.active {
-  background-color: rgba(255,255,255,.8)
-}
-
-nav a {
-  padding: 1em 0;
+  background: var(--basic);
+  z-index: 1000;
+  border-bottom: .5px solid var(--grey);
   color: var(--dark);
 }
 
-nav .menu {
-  width: 60%;
+nav .logo {
+  padding: 1em 0;
 }
 
-nav .hamBtn {
-  display: none;
+nav a {
+  color: var(--dark);
 }
 
-/* end nav */
-
-/* jumbotron */
-
-#jumbotron {
-  text-align: center;
-  padding: 3em 0;
-}
-
-#jumbotron .row {
-  overflow: hidden;
-  margin: 3em 0;
-  padding: 2em 0;
-  background: linear-gradient(180deg, rgba(2, 0, 36, 0.815) 0%, rgba(9, 9, 121, 0.801) 35%, rgba(20, 20, 20, 0.89) 100%), url(../img/villa-gunung-gelis/jp1.jpeg) no-repeat;
-  background-position: center;
-  border-radius: 1em;
-  overflow: hidden;
-  color: var(--basic);
-}
-
-#jumbotron .content {
-  padding: 1em;
-  margin: 1em 0;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  width: 100%;
-  height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.822); */
-  color: var(--basic);
-}
-
-#jumbotron .content figcaption{
-  text-align: left;
-  padding: 2em;
-  position: relative;
-}
-
-#jumbotron .content figcaption::after {
-  content: '';
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: yellow;
-  position: absolute;
-  top: 10px;
-  left: 15px;
-}
-
-#jumbotron .col {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#jumbotron .col img {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-}
-
-#jumbotron .cta-btn {
-  margin-top: 1em;
+nav .navbar {
+  flex-direction: column;
+  align-items: flex-start;
   gap: 1em;
-  justify-content: center;
-  font-weight: var(--fw-5);
+  position: absolute;
+  top: 4em;
+  right: 0;
+  transition: .5s;
+  height: 0;
+  opacity: 0;
+  background-color: var(--basic);
+  border: .5px solid var(--grey);
+  overflow: hidden;
+  border-radius: .5em;
 }
 
-#jumbotron .cta-btn .light-btn {
-  display: block;
-  padding: .5em 1.5em;
-  border: 2px solid var(--royal-blue);
-  color: var(--royal-blue);
+nav .navbar.active {
+  height: auto;
+  opacity: 1;
 }
 
-#jumbotron .cta-btn .solid-btn {
-  padding: .5em 1.5em;
-  font-weight: var(--fw-5);
-  background-color: var(--royal-blue);
-  border: 2px solid var(--royal-blue);
+nav .navbar a {
+  justify-content: flex-start;
+  align-items: center;
+  gap: .8em;
+  width: 100%;
+  padding: 1em 2em;
+  color: var(--dark);
+}
+
+nav .navbar a:hover {
+  background-color: var(--bice-blue);
   color: var(--basic);
 }
 
+/* ENd Nav */
 
+/* Hero */
 
-/* end jumbotron */
-
-/* Responsive */
-/* Tablet View */
-@media screen and (max-width: 600px) {
-  /* nav */
-  nav {
-    padding: 1em 0;
-  }
-
-  nav .menu {
-    max-width: 200px;
-    flex-direction: column;
-    position: absolute;
-    top: 2.5em;
-    right: 0;
-    display: none;
-    transition: .3s ease-in-out;
-    align-items: flex-start;
-    border: 1px solid var(--grey);
-    border-radius: .5em;
-    overflow: hidden;
-    background-color: var(--basic);
-  }
-
-  nav .menu a {
-    width: 100%;
-    padding: 1em;
-  }
-
-  nav .menu a:hover {
-    background-color: var(--grey);
-  }
-
-  nav .menu.active {
-    display: flex;
-  }
-
-  nav .hamBtn {
-    display: block;
-  }
+#hero {
+  height: 500px;
+  margin-top: 1em;
 }
+
+#hero .col {
+  flex: 0 0 50%;
+  justify-content: center;
+  height: 100%;
+  background: var(--bice-blue);
+  color: var(--basic);
+}
+
+#hero .imgPreview {
+  background: url(../img/villa-gunung-gelis/jp1.jpeg) no-repeat center center/cover;
+  height: 100%;
+}
+
+#hero figcaption {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1em;
+}
+
+#hero figcaption a {
+  margin-top: 1em;
+  padding: 1em 2em;
+  width: 100%;
+  border: 2px solid var(--basic);
+  color: var(--basic);
+  font-weight: 600;
+}
+
+#hero a.mainBtn {
+  background: var(--basic);
+  color: var(--bice-blue);
+}
+
+/* End Hero */
