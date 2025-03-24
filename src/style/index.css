@@ -94,3 +94,63 @@ nav .navbar a:hover {
 }
 
 /* End Hero */
+
+/* Card Villa */
+
+#cardVilla {
+  margin: 2em 0;
+}
+
+#cardVilla .cardText {
+  text-align: center;
+  margin: 1em 0;
+}
+
+#cardVilla .filter {
+  display: none;
+}
+
+#cardVilla .filter button {
+  padding: .8em;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+#cardVilla .row {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin: 2em 0;
+}
+
+#cardVilla .card {
+  width: 100%;
+  background: var(--basic);
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+
+#cardVilla .card img {
+  border-radius: .5em;
+  width: 100%;
+  height: 300px;
+}
+
+#cardVilla .card figcaption {
+  text-align: left;
+  font-size: .9rem;
+}
+
+#cardVilla .card figcaption:not(.villaName) {
+  color: grey;
+}
+
+#cardVilla .card figcaption .villaName, .villaPrice {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+
+
+
+/* End Card Villa */
