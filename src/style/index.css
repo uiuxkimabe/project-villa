@@ -156,3 +156,35 @@ nav .navbar a:hover {
 /* End Card Villa */
 
 /* Responsive */
+
+@media screen and (max-width: 762px) {
+  nav .navbar {
+    top: 3em;
+  }
+
+  #hero {
+    position: relative;
+  }
+
+  #hero .row .col:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #hero .row .col {
+    flex: 0 0 100%;
+    background-color: rgba(14, 106, 168, 0.836);
+  }
+
+  #hero .imgPreview {
+    background-attachment: fixed;
+  }
+
+  #cardVilla .row {
+    grid-template-columns: 1fr;
+  }
+  
+}
