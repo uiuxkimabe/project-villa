@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✨ Villa Bambu ✨</title>
+  <!-- 👇 css code file 👇 -->
+  <link rel="stylesheet" href="./src/style/global.css" />
+  <link rel="stylesheet" href="./src/style/index.css" />
+  <link rel="stylesheet" href="./src/style/room.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/185a3acc44.js" crossorigin="anonymous"></script>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+</head>
+<body>
+  <!-- Nav -->
+    <nav>
+      <div class="container">
+        <div class="row">
+          <a href="index.html" class="logo d-flex">
+            <p> < Kembali</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  <!-- End Nav -->
+   <!-- Villa Details -->
+    <section id="villaDetails">
+      <div class="container">
+        <div class="row d-grid">
+          <div class="col booking__form">
+            <figcaption>
+              <h3>Booking Form</h3>
+            </figcaption>
+            <form class="d-flex">
+              <label for="customer__name">
+                <p>Nama Pemesan</p>
+                <input type="text" id="customer__name" placeholder="Masukkan Nama Anda" required />
+              </label>
+              <label for="pax">
+                <p>Jumlah Orang</p>
+                <input type="number" id="pax" value="20" required />
+              </label>
+              <figcaption class="date__reserv d-flex">
+                <label for="check__in">
+                  <p>Tanggal Masuk</p>
+                  <input type="date" id="check__in" required />
+                </label>
+                <label for="check__out">
+                  <p>Tanggal Keluar</p>
+                  <input type="date" id="check__out" required />
+                </label>
+              </figcaption>
+            </form>
+          </div>
+          <div class="col villa__details">
+            <!-- Swiper -->
+             <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div class="villa__description">
+              <figcaption>
+                <p class="villaName">Villa Bambu</p>
+                <p class="villaPrice">1.500.000 / Night</p>
+              </figcaption>
+              <figcaption>
+                <p class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum tenetur beatae doloremque ut architecto inventore magnam, asperiores iure dolores eveniet blanditiis ipsa, hic eos. Laborum nostrum reiciendis eveniet pariatur placeat!
+                </p>
+              </figcaption>
+              <figcaption class="facilities">
+                <h3>Fasilitas</h3>
+                <ul class="d-flex">
+                  <li>2 Kamar</li>
+                  <li>Lapangan</li>
+                  <li>Wifi</li>
+                  <li>Kolam Renang</li>
+                </ul>
+              </figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+   <!-- End Villa Details -->
+    <!-- Vanilla JS -->
+     <script src="./src/js/room.js"></script>
+    <!-- JS Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+</body>
+</html>

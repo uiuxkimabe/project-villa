@@ -8,6 +8,7 @@ body {
     box-sizing: border-box;
     font-family: "Poppins", serif;
     text-decoration: none;
+    list-style: none;
     /* color: var(--dark); */
 }
 
