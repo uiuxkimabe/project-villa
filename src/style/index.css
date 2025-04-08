@@ -133,6 +133,7 @@ nav .navbar a:hover {
   transition: .5s;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.158);
   cursor: pointer;
+  color: var(--dark);
 }
 
 #cardVilla .card:hover {
