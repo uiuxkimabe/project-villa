@@ -192,14 +192,14 @@ nav .navbar a:hover {
     height: 100%;
   }
 
-    #hero figcaption {
-      /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-      gap: 0;
-    }
+  #hero figcaption {
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    gap: 0;
+  }
 
-    #hero figcaption a:first-child {
-      grid-row: 2;
-    }
+  #hero figcaption a:first-child {
+    grid-row: 2;
+  }
 
   #hero .row .col {
     flex: 0 0 100%;

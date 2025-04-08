@@ -6,7 +6,7 @@
   grid-template-columns: 1fr 3fr;
   gap: 1em;
   place-items: start;
-  margin: 1em ;
+  margin: 1em 0;
   position: relative;
 }
 
@@ -25,6 +25,7 @@
   position: sticky;
   top: 80px;
   left: 0;
+  background-color: var(--basic);
 }
 
 .booking__form form {
@@ -33,7 +34,7 @@
   margin-top: 1em;
 }
 
-.booking__form form label, textarea {
+.booking__form form label {
   width: 100%;
 }
 
@@ -48,6 +49,10 @@
   border-radius: .5em;
   background-color: var(--basic);
   color: var(--dark);
+}
+
+.booking__form .date__reserv {
+  width: 100%;
 }
 
 .booking__form .book__btn {
@@ -87,9 +92,13 @@
   object-fit: cover;
 }
 
+.villa__details h3 {
+  margin-bottom: .3rem;
+}
+
 .villa__details ul {
   justify-content: flex-start;
-  gap: 1em;
+  gap: .5em;
   flex-wrap: wrap;
 }
 
@@ -99,13 +108,22 @@
   border-radius: .5em;
 }
 
-.villa__details .description {
+.villa__details figcaption {
   margin: 1em 0;
 }
 
 
 @media (max-width: 768px) {
+  body {
+    font-size: 90%;
+  }
+
   #villaDetails .row {
     grid-template-columns: 1fr;
+    margin: 0;
+  }
+
+  .villa__details {
+    grid-row: 1;
   }
 }
