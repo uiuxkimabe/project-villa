@@ -161,10 +161,44 @@ nav .navbar a:hover {
   color: var(--dark);
 }
 
-
-
-
 /* End Card Villa */
+
+/* Rental Car */
+
+#rental {
+  margin: 2em 0;
+}
+
+#rental .row {
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+}
+
+#rental .row .col {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+#rental .rental__card {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 1em;
+  padding: 1em;
+  overflow-x: scroll;
+  scroll-snap-align: left;
+  scroll-snap-type: x mandatory;
+}
+
+#rental .rental__card::-webkit-scrollbar {
+  display: none;
+}
+
+.rental__card .car-card {
+  padding: 1em;
+  flex: 0 0 250px;
+  height: 300px;
+  border: .5px solid var(--grey);
+}
 
 /* Responsive */
 
@@ -212,6 +246,17 @@ nav .navbar a:hover {
 
   #cardVilla .row {
     grid-template-columns: 1fr;
+  }
+
+  /* Rental Car */
+
+  #rental .row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .rental__card .car-card {
+    padding: 1em 0;
   }
   
 }
