@@ -21,45 +21,70 @@ window.addEventListener('scroll',()=> {
     }
 })
 
-// Display Villa 
-class CardVilla {
-    constructor(villaName, pathFolder, priceWd, priceWe) {
-        this.villa = villaName;
-        this.path = pathFolder;
-        this.extentionImg = ['jpg', 'png', 'jpeg']
-        this.priceWd = priceWd;
-        this.priceWe = priceWe;
+// List Villa 
+const listVilla = [
+    {
+        namaVilla: "Villa Bambu",
+        type: "Reguler",
+        pax: 10,
+        link: "villa-bambu.html"
+    }, 
+    {
+        namaVilla: "Villa Gunung Geulis",
+        type: "Reguler",
+        pax: 10,
+        link: "villa-gunung-geulis.html"
+    }, 
+    {
+        namaVilla: "Villa Puncak",
+        type: "Medium",
+        pax: 20,
+        link: "villa-puncak.html"
+    }, 
+    {
+        namaVilla: "Villa Puri Indah",
+        type: "VIP",
+        pax: 30,
+        link: "villa-puri-indah.html"
     }
-    // Function Display Villa
-    displayVilla() {
-        const parentCard = document.querySelector('#cardVilla .row')
-        const createCard = document.createElement('a')
-        const priceHighlight = `${this.priceWd.toLocaleString('id-ID')} \- ${this.priceWe.toLocaleString('id-ID')} / Malam`
-        createCard.classList.add('card')
-        createCard.setAttribute('href', `${this.path}.html`)
-        createCard.setAttribute('target', '_blank')
-        createCard.innerHTML = `
-            <div class="card-header">
-                <img src="./src/img/${this.path}/1.${this.extentionImg[0]||this.extentionImg[1]||this.extentionImg[2]}" alt="${this.path}">
-            </div>
-            <div class="card-body">
-                <h3>${this.villa}</h3>
-                <p>Rp. ${priceHighlight}</p>
-            </div>
-        `
-        parentCard.appendChild(createCard)
+]
+
+const cardTitle = document.querySelectorAll('.card-title')
+const type = document.querySelectorAll('.type')
+const pax = document.querySelectorAll('.pax')
+const rate = document.querySelectorAll('.rate')
+
+class Villa {
+    constructor(villaName, type, minimumPax) {
+        this.name = villaName;
+        this.type = type;
+        this.pax = minimumPax;
+        this.rate = 0;
+    }
+
+    cardDetail(param) {
+        cardTitle[param].innerHTML = this.name;
+        pax[param].innerHTML = `Capacity : ${this.pax} Pax`;
+        const linkElement = document.createElement('a')
+        const textLinkElement = document.createTextNode('Details')
+    }
+
+    price(param) {
+        if (this.type == "Reguler") {
+            this.rate = 1000000
+            rate[param].innerHTML = `Start : ${this.rate.toLocaleString('id-ID')}`;
+        } else if (this.type == "Medium") {
+            this.rate = 1500000
+            rate[param].innerHTML = `Start : ${this.rate.toLocaleString('id-ID')}`;
+        } else {
+            this.rate = 2000000
+            rate[param].innerHTML = `Start : ${this.rate.toLocaleString('id-ID')}`;
+        }
     }
 }
 
-// Villa Bambu
-const villaBambu = new CardVilla('Villa Bambu', 'villa-bambu', 2500000,3000000)
-villaBambu.displayVilla()
-// Villa gunung geulis
-const villaGunungGelis = new CardVilla('Villa Gunung Geulis', 'villa-gunung-gelis', 1500000,3000000)
-villaGunungGelis.displayVilla()
-// Villa Puncak
-const villaPuncak = new CardVilla('Villa Puncak', 'villa-puncak', 2000000,2500000)
-villaPuncak.displayVilla()
-// Villa Puri Indah
-const villaPuriIndah = new CardVilla('Villa Puri Indah', 'villa-puri-indah', 1500000,2000000)
-villaPuriIndah.displayVilla()
+listVilla.forEach((data,index) => {
+    const villas = new Villa(data.namaVilla, data.type, data.pax);
+    villas.cardDetail(index);
+    villas.price(index);
+});

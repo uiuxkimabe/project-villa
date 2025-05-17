@@ -58,107 +58,29 @@ nav .navbar a:hover {
 /* Hero */
 
 #hero {
-  height: 500px;
-  margin-top: 1em;
+  height: 300px;
+  text-align: center;
 }
 
-#hero .col {
-  flex: 0 0 50%;
+#hero .container {
   justify-content: center;
-  height: 100%;
-  background: var(--bice-blue);
-  color: var(--basic);
-}
-
-#hero .imgPreview {
-  background: url(../img/villa-gunung-gelis/1.jpg) no-repeat center center/cover;
-  height: 100%;
-}
-
-#hero figcaption {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1em;
-}
-
-#hero figcaption a {
-  margin-top: 1em;
-  padding: 1em 2em;
-  width: 100%;
-  border: 2px solid var(--basic);
-  color: var(--basic);
-  font-weight: 600;
-}
-
-#hero a.mainBtn {
-  background: var(--basic);
-  color: var(--bice-blue);
 }
 
 /* End Hero */
 
 /* Card Villa */
 
-#cardVilla {
-  margin: 2em 0;
+#villa .card img {
+  width: 100%;
 }
 
-#cardVilla .cardText {
-  text-align: center;
-  margin: 1em 0;
-}
-
-#cardVilla .filter {
-  display: none;
-}
-
-#cardVilla .filter button {
-  padding: .8em;
-  border: none;
-  border-bottom: 1px solid black;
-}
-
-#cardVilla .row {
+#villa .row {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
-  margin: 2em 0;
+  gap: 1em;
 }
 
-#cardVilla .card {
-  width: 100%;
-  background: var(--basic);
-  overflow: hidden;
-  border: .5px solid var(--grey);
-  padding: 1em;
-  border-radius: .5em;
-  transition: .5s;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.158);
-  cursor: pointer;
-  color: var(--dark);
-}
-
-#cardVilla .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.301);
-}
-
-#cardVilla .card img {
-  border-radius: .5em;
-  width: 100%;
-  height: 300px;
-}
-
-#cardVilla .card figcaption {
-  text-align: left;
-  font-size: .9rem;
-}
-
-#cardVilla .card figcaption:not(.villaName) {
-  color: grey;
-}
-
-#cardVilla .card figcaption .villaName, .villaPrice {
-  font-weight: 500;
-  color: var(--dark);
+#villa .card-price {
+  align-items: flex-start;
 }
 
 /* End Card Villa */
@@ -185,7 +107,7 @@ nav .navbar a:hover {
   gap: 1em;
   padding: 1em;
   overflow-x: scroll;
-  scroll-snap-align: left;
+  scroll-snap-align: start;
   scroll-snap-type: x mandatory;
 }
 
