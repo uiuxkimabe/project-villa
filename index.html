@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="./src/style/index.css">
 <!-- font awesome -->
 <script src="https://kit.fontawesome.com/185a3acc44.js" crossorigin="anonymous"></script>
+<!-- AOS -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 <!-- Nav -->
@@ -47,47 +49,61 @@
 <!-- Hero -->
 <section id="hero">
     <div class="container d-flex">
-        <h2>Liburan Seru 🧳, Jalanin Aja Dulu 👋</h2>
+        <h2 data-aos="fade-up">Liburan Seru 🧳, Jalanin Aja Dulu 👋</h2>
     </div>
 </section>
 <!-- End Hero -->
 <!-- Card Villa -->
 <section id="villa">
     <div class="container">
+        <figcaption>
+            <h3 style="margin: 1em 0;" data-aos="fade-up">Rekomendasi Villa</h3>
+        </figcaption>
         <div class="row d-grid">
-            <div class="card">
+            <a href="" class="card">
                 <img src="./src/img/villa-bambu/1.jpg" alt="Nyari Villa Bambu">
                 <div class="card-title"></div>
-                <div class="card-price d-flex">
+                <div class="card-price">
                     <figcaption>
                         <p class="type"></p>
                         <p class="pax"></p>
                         <h4 class="rate"></h4>
                     </figcaption>
                 </div>
-            </div>
-            <div class="card">
-                <img src="./src/img/villa-bambu/1.jpg" alt="Nyari Villa Bambu">
+            </a>
+            <a href="" class="card">
+                <img src="./src/img/villa-gunung-gelis/1.jpg" alt="Nyari Villa Gunung Geulis">
                 <div class="card-title"></div>
-                <div class="card-price d-flex">
+                <div class="card-price">
                     <figcaption>
                         <p class="type"></p>
                         <p class="pax"></p>
                         <h4 class="rate"></h4>
                     </figcaption>
                 </div>
-            </div>
-            <div class="card">
-                <img src="./src/img/villa-bambu/1.jpg" alt="Nyari Villa Bambu">
+            </a>
+            <a href="" class="card">
+                <img src="./src/img/villa-puncak/1.jpg" alt="Nyari Villa Puncak">
                 <div class="card-title"></div>
-                <div class="card-price d-flex">
+                <div class="card-price">
                     <figcaption>
                         <p class="type"></p>
                         <p class="pax"></p>
                         <h4 class="rate"></h4>
                     </figcaption>
                 </div>
-            </div>
+            </a>
+            <a href="" class="card">
+                <img src="./src/img/villa-puri-indah/1.jpg" alt="Nyari Villa Puri Indah">
+                <div class="card-title"></div>
+                <div class="card-price">
+                    <figcaption>
+                        <p class="type"></p>
+                        <p class="pax"></p>
+                        <h4 class="rate"></h4>
+                    </figcaption>
+                </div>
+            </a>
         </div>
     </div>
 </section>
@@ -124,5 +140,10 @@
 
 <!-- 👇 javascript code file 👇 -->
 <script src="./src/js/index.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

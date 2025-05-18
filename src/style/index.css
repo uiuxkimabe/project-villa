@@ -70,8 +70,18 @@ nav .navbar a:hover {
 
 /* Card Villa */
 
+#villa .card {
+  width: 100%;
+  border: .5px solid var(--grey);
+  border-radius: 1em;
+  padding: 1em;
+}
+
 #villa .card img {
   width: 100%;
+  height: 300px;
+  border-radius: 1em;
+  margin-bottom: .8em;
 }
 
 #villa .row {

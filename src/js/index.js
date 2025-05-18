@@ -49,24 +49,25 @@ const listVilla = [
     }
 ]
 
+const cards = document.querySelectorAll('.card')
 const cardTitle = document.querySelectorAll('.card-title')
 const type = document.querySelectorAll('.type')
 const pax = document.querySelectorAll('.pax')
 const rate = document.querySelectorAll('.rate')
+// link layout
 
 class Villa {
-    constructor(villaName, type, minimumPax) {
+    constructor(villaName, type, minimumPax, link) {
         this.name = villaName;
         this.type = type;
         this.pax = minimumPax;
+        this.link = link;
         this.rate = 0;
     }
 
     cardDetail(param) {
         cardTitle[param].innerHTML = this.name;
-        pax[param].innerHTML = `Capacity : ${this.pax} Pax`;
-        const linkElement = document.createElement('a')
-        const textLinkElement = document.createTextNode('Details')
+        pax[param].innerHTML = `Capacity : ${this.pax} Pax`;        
     }
 
     price(param) {
@@ -81,10 +82,19 @@ class Villa {
             rate[param].innerHTML = `Start : ${this.rate.toLocaleString('id-ID')}`;
         }
     }
+
+    links(param) {
+        cards[param].setAttribute('href', this.link);
+        cards[param].setAttribute('data-aos', "fade-up");
+        cards[param].setAttribute('data-aos-delay', 200);
+        cards[param].style.color = "black";
+        cards[param].style.fontSize = ".9rem"
+    }
 }
 
 listVilla.forEach((data,index) => {
-    const villas = new Villa(data.namaVilla, data.type, data.pax);
+    const villas = new Villa(data.namaVilla, data.type, data.pax, data.link);
     villas.cardDetail(index);
     villas.price(index);
+    villas.links(index)
 });
