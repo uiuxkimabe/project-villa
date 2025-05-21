@@ -22,7 +22,7 @@ window.addEventListener('scroll',()=> {
 })
 
 // List Villa 
-export const listVilla = [
+const listVilla = [
     {
         namaVilla: "Villa Bambu",
         type: "Reguler",
