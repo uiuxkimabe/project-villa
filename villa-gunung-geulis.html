@@ -125,11 +125,42 @@
       </div>
     </section>
 
-
    <!-- End Villa Details -->
 
-   <!-- <script src="./src/js/index.js"></script> -->
-   <script src="./src/js/room.js"></script>
+   <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row d-grid footer__content">
+          <div class="col">
+            <h4>Nyari Villa</h4>
+            <p>Liburan seru, jalanin aja dulu</p>
+          </div>
+          <div class="col">
+            <h4>Kontak</h4>
+            <ul>
+              <li><i class="fas fa-phone"></i> +62-xxx-xxx-xxx</li>
+              <li><i class="fas fa-envelope"></i> info@villabambu.com</li>
+              <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Villa Bambu, Bogor</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Ikuti Kami</h4>
+            <div class="col d-flex social__media">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col copyright">
+            <p>&copy; 2024 Villa Bambu. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
     
     <!-- JS Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -142,5 +173,12 @@
       },
     });
     </script>
+
+    <!-- Room JS -->
+      <script src="./src/js/room.js"></script>
+      <script>
+        const villas = new ProfileVilla("Villa Gunung Geulis", 1000000, 2000000)
+        villas.callVilla();
+      </script>
 </body>
 </html>
